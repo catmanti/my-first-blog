@@ -1,35 +1,24 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
-    <head>
-        <title>Django Girls blog</title>
-        <style>  
-p {  
-     color: #9000A1; 
-}  
-h1 {
-	color:pink;
-}
-p.padding1 {  
-	background-color: pink; 
-    padding-top: 50px;  
-    padding-right: 100px;  
-    padding-bottom: 100px;  
-    padding-left: 200px;  
-}  
-p.padding2 {  
-	background-color: grey; 
-    padding-top: 50px;  
-    padding-right: 100px;  
-    padding-bottom: 10px;  
-    padding-left: 200px;  
-}  
-	</style>  
-    </head>
-    <body>
-    	<p class="padding1"></p>  
-    	<h1>In base.html</h1>
-       {% block content %}
-<p>No Data available</p>
-       {% endblock %}
-    </body>
+<head>
+	<title>Catman's blog</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<body>
+	<div class="page-header">
+		<h1><a href="/">Tigerman's Blog</a></h1>
+	</div>
+	<div class="content container">
+		<div class="row">
+			<div class="col-md-8">
+				{% block content %}
+				{% endblock %}
+			</div>
+		</div>
+	</div>
+</body>
 </html>
